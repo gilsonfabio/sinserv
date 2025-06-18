@@ -25,7 +25,7 @@ const handler = NextAuth({
           const result = loginSchema.safeParse(credentials);
           if (!result.success) return null;
 
-          const response = await axios.post(`${API_URL}/signInSrv`, {
+          const response = await axios.post(`https://backcaldascard.vercel.app/signInSrv`, {
             email: credentials?.email,
             password: credentials?.password,
           });
