@@ -13,6 +13,7 @@ const loginSchema = z.object({
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://backcaldascard.vercel.app/";
 
 const handler = NextAuth({
+  
   providers: [
     CredentialsProvider({
       name: "credentials",
