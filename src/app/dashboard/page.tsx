@@ -6,6 +6,7 @@ import {api} from '@/server/api';
 import Link from 'next/link';
 import Footer from '@/components/footer';
 import moment from 'moment';
+import 'moment/locale/pt-br';
 
 type comprasProp = {
     parIdCompra: number; 
@@ -36,6 +37,8 @@ export default function Dashboard(){
     const [usrAno, setUsrAno] = useState('');
     const [usrCartao, setUsrCartao] = useState('');
     const [compras, setCompras] = useState<Array<comprasProp>>([]);
+    
+    moment.locale('pt-br');
 
     useEffect(() => {
         console.log("Status:", status);
