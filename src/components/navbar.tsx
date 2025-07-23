@@ -3,12 +3,9 @@
 import Image from "next/image";
 import { ModeToggle } from "./modeToggle";
 import { useRouter } from "next/navigation";
-import { useSession, signOut } from "next-auth/react";
 
 export default function Navbar() {
     const router = useRouter();
-    const { data: session, status } = useSession();
-
     const handleLogout = () => {
         router.push("/logout"); 
       };
