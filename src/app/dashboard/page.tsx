@@ -41,8 +41,8 @@ export default function Dashboard(){
     moment.locale('pt-br');
 
     useEffect(() => {
-        console.log("Status:", status);
-        console.log("Session:", session);
+        //console.log("Status:", status);
+        //console.log("Session:", session);
 
         if (status === "authenticated") {
             if (session?.user?.cartao) {
